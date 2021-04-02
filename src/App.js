@@ -9,6 +9,7 @@ function App() {
         <Container className="App">
             <Row>
                 <Col>Home</Col>
+                <Col>Home</Col>
             </Row>
         </Container>
     );
