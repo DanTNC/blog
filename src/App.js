@@ -1,14 +1,27 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import './App.sass';
 
 function App() {
   return (
     pug`
-      Container.App
-        Row
-          Col Home
+      div.container.App
+        div.row
+          div.col-8.align-self-center
+            img#profile(src="profile.jpg")
+            
+            hr.text-light-main
+
+            span 顏廷安
+
+            br
+
+            span Daniel
+
+          div.col-4.align-self-center
+            div.row.mb-2
+              button.rounded.btn.btn-dark-main Contact
+
+            div.row
+              button.rounded.btn.btn-dark-secondary Skill
     `
   );
 }

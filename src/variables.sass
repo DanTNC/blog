@@ -1,5 +1,31 @@
-$background: #2E0F14
-$dark-main: #355070
+$background: #0a0909
+$dark-main: #528d70
 $dark-secondary: #C06E52
-$light-main: #AFD5AA
-$light-secondary: #F96F5D
+$light-main: #96c9a2
+$light-secondary: #cf8268
+$dark-vars: [background, dark-main, dark-secondary]
+
+@mixin text-color($type, $color)
+    .text-#{$type}
+        color: $color
+
+@mixin btn-color($type, $color)
+    .btn-#{$type}
+        color: if(index($dark-vars, $type), white, black)
+        background-color: $color
+        transition: 0.2s
+        &:hover
+            color: if(index($dark-vars, $type), white, black)
+            background-color: if(index($dark-vars, $type), lighten($color, 5%), darken($color, 5%))
+            transform: scale(1.05)
+
+@include text-color("background", $background)
+@include text-color("dark-main", $dark-main)
+@include text-color("dark-secondary", $dark-secondary)
+@include text-color("light-main", $light-main)
+@include text-color("light-secondary", $light-secondary)
+@include btn-color("background", $background)
+@include btn-color("dark-main", $dark-main)
+@include btn-color("dark-secondary", $dark-secondary)
+@include btn-color("light-main", $light-main)
+@include btn-color("light-secondary", $light-secondary)
