@@ -8,20 +8,18 @@ function App() {
           div.col-8.align-self-center
             img#profile(src="profile.jpg")
             
-            hr.text-light-main
+            hr.text-light-secondary.divider(size=1)
 
-            span 顏廷安
+            div.text-light-main.names 顏廷安
 
-            br
-
-            span Daniel
+            div.text-light-main.names Daniel
 
           div.col-4.align-self-center
             div.row.mb-2
-              button.rounded.btn.btn-dark-main Contact
+              button.rounded.btn.btn-dark-main.fw-bold Contact
 
             div.row
-              button.rounded.btn.btn-dark-secondary Skill
+              button.rounded.btn.btn-dark-secondary.fw-bold Skill
     `
   );
 }

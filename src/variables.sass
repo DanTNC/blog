@@ -1,4 +1,5 @@
-$background: #0a0909
+// $background: #0a0909
+$background: #28282c
 $dark-main: #528d70
 $dark-secondary: #C06E52
 $light-main: #96c9a2
@@ -11,11 +12,11 @@ $dark-vars: [background, dark-main, dark-secondary]
 
 @mixin btn-color($type, $color)
     .btn-#{$type}
-        color: if(index($dark-vars, $type), white, black)
+        color: if(index($dark-vars, $type), $background, black)
         background-color: $color
         transition: 0.2s
         &:hover
-            color: if(index($dark-vars, $type), white, black)
+            color: if(index($dark-vars, $type), $background, black)
             background-color: if(index($dark-vars, $type), lighten($color, 5%), darken($color, 5%))
             transform: scale(1.05)
 
